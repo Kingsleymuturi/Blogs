@@ -19,7 +19,7 @@ To get the code..
 
 1. Cloning the repository:
   ```bash
-  git clone https://github.com/Kingsleymuturi/Pitch-app.git
+  git clone https://github.com/Kingsleymuturi/Blogs.git
   ```
 2. Move to the folder and install requirements
   ```bash
