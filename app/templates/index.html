@@ -19,7 +19,7 @@
                             <div class="col-md-10 pr-4 d-justify userblog">
                                 <h4><a href="{{url_for('main.blog',id = blog.id)}}" style="text-decoration: none;color: aliceblue;">{{blog.title | upper}}</a></h4>
                                 <p>{{blog.content}}</p>
-                                <p> <a class="btn btn-sm btn-outline-warning" href="{{url_for('main.blog',id = blog.id)}}" > See more</a> {{blog.comment.count()}} Comments</p>
+                                <p> <a class="btn btn-sm btn-warning" href="{{url_for('main.blog',id = blog.id)}}" > See more</a> {{blog.comment.count()}} Comments</p>
                                 <p>Posted on : {{blog.posted.strftime('%d-%m-%Y')}}</p>
                                 
                             </div>
