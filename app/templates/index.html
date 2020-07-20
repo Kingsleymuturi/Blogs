@@ -32,9 +32,9 @@
                 {% for page_num in blogs.iter_pages(left_edge = 1, right_edge = 1, left_current=1, right_current = 2) %}
                     {% if page_num %}
                         {% if blogs.page == page_num %}
-                            <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-warning mb-2">{{ page_num }}</a>
+                            <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-warning mb-2">Page {{ page_num }}</a>
                         {% else%}
-                        <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-outline-warning mb-2">{{ page_num }}</a>
+                        <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-outline-warning mb-2">Page {{ page_num }}</a>
                         {% endif %}
                     {% else%}
                         ...
