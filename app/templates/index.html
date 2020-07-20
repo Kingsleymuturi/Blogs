@@ -43,9 +43,10 @@
 
             </div>
             <div class="col-md-4">
-                {% if current_user.is_authenticated %}
                 <div class="container">
+                    {% if current_user.is_authenticated %}
                     <div class="col-md-3 "><a class="btn btn-sm btn-warning " id="ref" href="{{url_for('main.new_blog')}}">Post Blog</a></div><br>
+                    {% endif %}
                     <div class="card cardquote">
                         <div class="card-title">
                             <h4>A quote by: <span style="color: aliceblue">{{quote.author}}</span> </h4>
@@ -53,6 +54,7 @@
                         <p class="card-text">{{quote.quote}}</p>
                     </div>
                 </div>
+                {% if current_user.is_authenticated %}
                 <div class="container-fluid">
                     {% for message in get_flashed_messages() %}
                     <div class="alert alert-success">
