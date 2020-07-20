@@ -2,12 +2,8 @@
 
 {% block content %}
     <div class="container landing">
-        <div class="row ">
-                {% if current_user.is_authenticated %}
-                <div class="col-md-3 "><a class="btn btn-sm btn-info " id="ref" href="{{url_for('main.new_blog')}}">Post</a></div>
-                {% endif %}
-            
-            <div class="col-md-9 "><h1 >Welcome to Blog-app</h1></div>
+        <div class="row">            
+            <div class="col-md-9 "><h1 >Welcome to Blog-app!✍</h1></div>
         </div>
 
         <div class="row">
@@ -47,7 +43,9 @@
 
             </div>
             <div class="col-md-4">
+                {% if current_user.is_authenticated %}
                 <div class="container">
+                    <div class="col-md-3 "><a class="btn btn-sm btn-warning " id="ref" href="{{url_for('main.new_blog')}}">Post</a></div>
                     <div class="card cardquote">
                         <div class="card-title">
                             <h4>A quote by: <span style="color: rgb(3, 3, 3)">{{quote.author}}</span> </h4>
@@ -68,10 +66,11 @@
                             <input type="email"  class="form-control " name ="subscriber" required>
                         </div>
                         <div class="md-form form-group">
-                            <button class="btn btn-sm btn-outline-info" id="subs">Subscribe</button>
+                            <button class="btn btn-sm btn-outline-warning" id="subs">Subscribe</button>
                         </div>
                     </form>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>
