@@ -20,7 +20,7 @@
                                 <p>Posted on : {{blog.posted.strftime('%d-%m-%Y')}}</p>
                                 <h4><a href="{{url_for('main.blog',id = blog.id)}}">{{blog.title | upper}}</a></h4>
                                 <p>{{blog.content}}</p>
-                                <p> <a class="btn btn-sm btn-info" href="{{url_for('main.blog',id = blog.id)}}" > Comment</a> {{blog.comment.count()}} Comments</p>
+                                <p> <a class="btn btn-sm btn-info" href="{{url_for('main.blog',id = blog.id)}}" > See more</a> {{blog.comment.count()}} Comments</p>
                                 
                             </div>
                         </div> 
@@ -32,9 +32,9 @@
                 {% for page_num in blogs.iter_pages(left_edge = 1, right_edge = 1, left_current=1, right_current = 2) %}
                     {% if page_num %}
                         {% if blogs.page == page_num %}
-                            <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-info mb-2">{{ page_num }}</a>
+                            <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-warning mb-2">{{ page_num }}</a>
                         {% else%}
-                        <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-outline-info mb-2">{{ page_num }}</a>
+                        <a href="{{url_for('main.index',page = page_num)}}" class="btn btn-sm btn-outline-warning mb-2">{{ page_num }}</a>
                         {% endif %}
                     {% else%}
                         ...
