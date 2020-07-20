@@ -28,7 +28,6 @@ To get the code..
   ```
 3. Exporting Configurations
   ```bash
-  export API_KEY='Enter your API key here'
   export MAIL_USERNAME = 'Enter your email'
   export MAIL_PASSWORD = 'Enter your password'
   export SECRET_KEY='Enter your secret key here'
