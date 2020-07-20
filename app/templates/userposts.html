@@ -16,11 +16,10 @@
                                 <img class="rounded-circle blog-img mr-10" src="{{ url_for('static', filename='photos/' + blog.user.profile_pic_path) }}">
                             </div>
                             <div class="col-md-6">
-                                <p>By <span style="color: aliceblue">{{blog.user.username}}</span>  on {{blog.posted.strftime('%d-%m-%Y')}}</p>
                                 <h3>Tittle: <a href="{{url_for('main.blog',id = blog.id)}}" style="text-decoration: none;color: aliceblue;">{{blog.title}}</a></h3>
                                 <p>{{blog.content}}</p>
                                 <p>{{blog.comment.count()}} Comment(s)</p>
-    
+                                <p>By <span style="color: aliceblue">{{blog.user.username}}</span>  on {{blog.posted.strftime('%d-%m-%Y')}}</p>
                             </div>
                             <div class="col-md-4">
                                 <form class="form-inline" action="{{url_for('main.comment',blog_id = blog.id)}}" method="POST">
