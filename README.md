@@ -12,7 +12,7 @@ This project was generated with [Python](https://github.com/python) version 3.7.
 ## Description of functionality:
 This app enables users to view various blogs from other people and also create an account to be able to submit their own blogs if they wish.
 ## Access
-* Click this link to access the web app https://kingsley-blogs.herokuapp.com/
+* Click this link to access the web app https://kingsley-blogs.herokuapp.com/ (Currently not available)
 
 ## How to run the application locally
 To get the code..
